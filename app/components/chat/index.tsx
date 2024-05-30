@@ -170,10 +170,24 @@ const Chat: FC<IChatProps> = ({
                   </>
                 )
               }
+              <div className='absolute bottom-2 left-2 flex items-center'>
+                <Tooltip
+                  selector='micro-tip'
+                  htmlContent={
+                    <div>
+                      <div>点击开始语音</div>
+                      <div>松开即可转换成文字</div>
+                    </div>
+                  }
+                >
+                  <div className={`${s.microphone} w-6 h-6 cursor-pointer rounded-md text-gray-500`} />
+                </Tooltip>
+                <div className='mx-1 w-[1px] h-4 bg-black/5' />
+              </div>
               <Textarea
                 className={`
                   block w-full px-2 pr-[118px] py-[7px] leading-5 max-h-none text-sm text-gray-700 outline-none appearance-none resize-none
-                  ${visionConfig?.enabled && 'pl-12'}
+                  ${visionConfig?.enabled ? 'pl-18' : 'pl-10'}
                 `}
                 value={query}
                 onChange={handleContentChange}

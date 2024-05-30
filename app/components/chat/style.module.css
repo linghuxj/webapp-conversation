@@ -77,8 +77,17 @@
   background: url(./icons/send.svg) center center no-repeat;
 }
 
+.microphone {
+  background: url(./icons/microphone.svg) center center no-repeat;
+}
+
 .sendBtn:hover {
   background-image: url(./icons/send-active.svg);
+  background-color: #EBF5FF;
+}
+
+.microphone:hover {
+  background-image: url(./icons/microphone-active.svg);
   background-color: #EBF5FF;
 }
 
